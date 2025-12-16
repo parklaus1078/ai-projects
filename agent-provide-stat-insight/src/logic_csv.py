@@ -1,10 +1,10 @@
-# logic_csv.py
 from langchain_openai import ChatOpenAI
 from langchain_experimental.agents.agent_toolkits import create_pandas_dataframe_agent
+from constants.common_constants import GPT_MODEL
 
 def create_analysis_agent(df):
     """데이터프레임을 받아 Pandas Agent를 반환"""
-    llm = ChatOpenAI(model="gpt-4o", temperature=0)
+    llm = ChatOpenAI(model=GPT_MODEL, temperature=0)
     
     agent = create_pandas_dataframe_agent(
         llm, 
