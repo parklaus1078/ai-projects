@@ -1,15 +1,11 @@
 import streamlit as st
 import pandas as pd
-from dotenv import load_dotenv
 
-# 모듈 임포트 (우리가 만든 파일들)
 import utils
 import logic_rag
 import logic_csv
 from constants.app_constants import Modes
 
-# 1. 초기 설정
-load_dotenv()
 st.set_page_config(page_title="AI Multi-Modal Agent", layout="wide")
 utils.init_environment()
 
