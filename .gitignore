@@ -210,3 +210,4 @@ __marimo__/
 */saved_images
 */.python-version
 .DS_Store
+*/plot*
