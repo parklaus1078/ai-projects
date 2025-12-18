@@ -28,7 +28,7 @@ def get_vectorstore(pdf_file):
     os.remove(tmp_path)
     return vectorstore
 
-def get_rag_chain(vectorstore):
+def get_rag_chain(vectorstore: FAISS):
     """벡터 DB를 기반으로 질의응답 Chain을 생성하여 반환"""
     llm = ChatOpenAI(model=GPT_MODEL, temperature=0)
     retriever = vectorstore.as_retriever()
